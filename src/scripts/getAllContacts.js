@@ -7,10 +7,12 @@ export const getAllContacts = async () => {
     });
         return JSON.parse(data);
 };
+(async () => {
+    try {
+        const contacts = await getAllContacts();
+        console.log(contacts);
+    } catch (error) {
+        console.error( error);
+    }
 
-getAllContacts()
-
-    .then((data) => data)
-    .catch((error) => console.error(error));
-
-console.log(await getAllContacts());
+})();
