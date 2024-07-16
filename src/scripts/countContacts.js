@@ -11,11 +11,4 @@ export const countContacts = async () => {
     throw error;
   }
 };
-(async () => {
-  try {
-    const contactCount = await countContacts();
-    console.log('Number of contacts:', contactCount);
-  } catch(error) {
-    console.error('Error counting contacts', error);
-  }
-})();
+
